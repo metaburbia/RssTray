@@ -120,4 +120,56 @@
   <metadata name="NotifyRSSTray.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
   </metadata>
+  <metadata name="menuContextMain.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>146, 17</value>
+  </metadata>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="NotifyRSSTray.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        AAABAAEAEBAAAAEAIABoBAAAFgAAACgAAAAQAAAAIAAAAAEAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAeeuoLGnDbuxpv2f8ab9n/Gm/Z/xpv2f8ab9n/Gm/Z/xpv2f8ab9n/Gm/Z/xpv2f8ab9n/Gm/Z/xpw
+        2tIZcd02GnDbvRpy3f4ee+7+H37z/x9+8/8ffvP/H37z/x9+8/8ffvP/H37z/x9+8/8ffvP/H33z/x98
+        8P8bdOD+GnDa7hpv2f8ee+7+H37z/yB/9P8efvP/IH/0/x9+8/8ffvT/G3zz/xx88/8gf/T/HX3z/xt8
+        8/8effP/H37z/xpw2f8ab9n/Hn3y/yB/9P8cffP/osn6/1Wd9v8ffvP/KoX0/7/a+/+gyPn/GXvz/3Ou
+        +P+41vv/YKT3/x9/9f8acNn/Gm/Z/x998v8gf/T/frX4//////////7/DnTy/12i9v//////u9j7/xh6
+        8/+rzvr//////2yq9/8ff/X/GnDZ/xpv2f8fffL/IH/0/x598/+ky/r/V572/xR48v/I3/z//////2yq
+        9/8Td/P/4e39//////8ngvP/H3/1/xpw2f8ab9n/H33y/yB/9P8gf/T/HX3z/w108v+ex/n////+/+rz
+        /f8XevP/RJT1///////h7f3/E3fy/x9/9P8acNn/Gm/Z/x998v8gf/T/UJr2/5bC+f/r8/3////+////
+        /v8zifT/FHfy/9Dk/P////7/d7H3/yB/9P8ff/X/GnDZ/xpv2f8effL/H37z/4q7+f////7//////8zi
+        /P8uhvT/Gnvz/5PA+f////7/5fD9/xR48v8ffvP/IoD0/xpw2f8Zb9n/KILy/z+R9v9xr/n/ksH6/1Se
+        +P88kPb/M4v2/7PT+v/////////+/z6Q9v8viPX/MIn1/zGJ9v8Zb9n/F27Y/1Kd9/9XoPj/Tpv4/0SV
+        +P9bovn/kcD6//r8/v////7//P3+/1yi+P9Ck/f/P5H3/z2P9v87kPf/GW/Z/xdt2P9dovj/YaX6/6nO
+        /P///////////////v////7/yuH9/1Gc+P9Om/j/TJn4/0mY9/9Glvf/Rpb4/xhu2f8Wbdj/Y6f5/2iq
+        +v+w0vz/+/3+/+rz/v+01Pz/bq36/1af+f9aovn/V6H5/1af+f9Tnfn/UZ35/1Gc+f8Xbtn/GG7Z/1id
+        9P5srPv/Zqn7/2Gm+/9ip/v/Z6n7/2ap+v9kqPr/Y6f6/2Gm+/9fpPr/XaP5/1qi+f9XoPn/F27Z/xtx
+        270hdt3+WJ70/mqr+v9qq/r/a6v6/2qr+v9qqvr/aar6/2ep+v9mqfr/ZKj5/2On+v9Xn/b/Knzi/hpw
+        2u8pf+kNG3HbvBhv2f8Wbdj/Fm3Y/xZt2P8Wbdj/Fm3Y/xZt2P8Wbdj/Fm3Y/xZt2P8Wbdj/F27Y/xtx
+        29Mdc902gAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAgAEAAA==
+</value>
+  </data>
+  <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        AAABAAEAEBAAAAEAIABoBAAAFgAAACgAAAAQAAAAIAAAAAEAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAeeuoLGnDbuxpv2f8ab9n/Gm/Z/xpv2f8ab9n/Gm/Z/xpv2f8ab9n/Gm/Z/xpv2f8ab9n/Gm/Z/xpw
+        2tIZcd02GnDbvRpy3f4ee+7+H37z/x9+8/8ffvP/H37z/x9+8/8ffvP/H37z/x9+8/8ffvP/H33z/x98
+        8P8bdOD+GnDa7hpv2f8ee+7+H37z/yB/9P8efvP/IH/0/x9+8/8ffvT/G3zz/xx88/8gf/T/HX3z/xt8
+        8/8effP/H37z/xpw2f8ab9n/Hn3y/yB/9P8cffP/osn6/1Wd9v8ffvP/KoX0/7/a+/+gyPn/GXvz/3Ou
+        +P+41vv/YKT3/x9/9f8acNn/Gm/Z/x998v8gf/T/frX4//////////7/DnTy/12i9v//////u9j7/xh6
+        8/+rzvr//////2yq9/8ff/X/GnDZ/xpv2f8fffL/IH/0/x598/+ky/r/V572/xR48v/I3/z//////2yq
+        9/8Td/P/4e39//////8ngvP/H3/1/xpw2f8ab9n/H33y/yB/9P8gf/T/HX3z/w108v+ex/n////+/+rz
+        /f8XevP/RJT1///////h7f3/E3fy/x9/9P8acNn/Gm/Z/x998v8gf/T/UJr2/5bC+f/r8/3////+////
+        /v8zifT/FHfy/9Dk/P////7/d7H3/yB/9P8ff/X/GnDZ/xpv2f8effL/H37z/4q7+f////7//////8zi
+        /P8uhvT/Gnvz/5PA+f////7/5fD9/xR48v8ffvP/IoD0/xpw2f8Zb9n/KILy/z+R9v9xr/n/ksH6/1Se
+        +P88kPb/M4v2/7PT+v/////////+/z6Q9v8viPX/MIn1/zGJ9v8Zb9n/F27Y/1Kd9/9XoPj/Tpv4/0SV
+        +P9bovn/kcD6//r8/v////7//P3+/1yi+P9Ck/f/P5H3/z2P9v87kPf/GW/Z/xdt2P9dovj/YaX6/6nO
+        /P///////////////v////7/yuH9/1Gc+P9Om/j/TJn4/0mY9/9Glvf/Rpb4/xhu2f8Wbdj/Y6f5/2iq
+        +v+w0vz/+/3+/+rz/v+01Pz/bq36/1af+f9aovn/V6H5/1af+f9Tnfn/UZ35/1Gc+f8Xbtn/GG7Z/1id
+        9P5srPv/Zqn7/2Gm+/9ip/v/Z6n7/2ap+v9kqPr/Y6f6/2Gm+/9fpPr/XaP5/1qi+f9XoPn/F27Z/xtx
+        270hdt3+WJ70/mqr+v9qq/r/a6v6/2qr+v9qqvr/aar6/2ep+v9mqfr/ZKj5/2On+v9Xn/b/Knzi/hpw
+        2u8pf+kNG3HbvBhv2f8Wbdj/Fm3Y/xZt2P8Wbdj/Fm3Y/xZt2P8Wbdj/Fm3Y/xZt2P8Wbdj/F27Y/xtx
+        29Mdc902gAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAgAEAAA==
+</value>
+  </data>
 </root>
