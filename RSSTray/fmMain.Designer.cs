@@ -36,8 +36,9 @@
             this.closeToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripSeparator();
             this.closeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.listViewNew = new System.Windows.Forms.ListView();
+            this.dgRSS = new System.Windows.Forms.DataGridView();
             this.menuContextMain.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgRSS)).BeginInit();
             this.SuspendLayout();
             // 
             // NotifyRSSTray
@@ -84,15 +85,21 @@
             this.closeToolStripMenuItem.Text = "Exit";
             this.closeToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
             // 
-            // listViewNew
+            // dgRSS
             // 
-            this.listViewNew.Location = new System.Drawing.Point(30, 184);
-            this.listViewNew.Name = "listViewNew";
-            this.listViewNew.Size = new System.Drawing.Size(193, 174);
-            this.listViewNew.TabIndex = 1;
-            this.listViewNew.UseCompatibleStateImageBehavior = false;
-            this.listViewNew.View = System.Windows.Forms.View.Details;
-            this.listViewNew.VirtualListSize = 10;
+            this.dgRSS.AllowUserToResizeColumns = false;
+            this.dgRSS.AllowUserToResizeRows = false;
+            this.dgRSS.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells;
+            this.dgRSS.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dgRSS.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
+            this.dgRSS.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgRSS.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.dgRSS.Location = new System.Drawing.Point(0, 215);
+            this.dgRSS.Name = "dgRSS";
+            this.dgRSS.RowHeadersVisible = false;
+            this.dgRSS.ShowEditingIcon = false;
+            this.dgRSS.Size = new System.Drawing.Size(443, 273);
+            this.dgRSS.TabIndex = 1;
             // 
             // fmMain
             // 
@@ -101,14 +108,15 @@
             this.ClientSize = new System.Drawing.Size(443, 488);
             this.ContextMenuStrip = this.menuContextMain;
             this.ControlBox = false;
-            this.Controls.Add(this.listViewNew);
+            this.Controls.Add(this.dgRSS);
+            this.DoubleBuffered = true;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "fmMain";
-            this.ShowInTaskbar = false;
-            this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Load += new System.EventHandler(this.fmMain_Load);
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.fmMain_FormClosing);
             this.menuContextMain.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgRSS)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -121,7 +129,7 @@
         private System.Windows.Forms.ToolStripMenuItem closeToolStripMenuItem1;
         private System.Windows.Forms.ToolStripSeparator toolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem showToolStripMenuItem;
-        private System.Windows.Forms.ListView listViewNew;
+        private System.Windows.Forms.DataGridView dgRSS;
     }
 }
 

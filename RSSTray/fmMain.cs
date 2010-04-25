@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
@@ -16,28 +17,34 @@ namespace RSSTray
     {
 
         private int fWidth, fHeight;
-        
+
         RssListView lvRss = new RssListView();
         List<string> URLS = new List<string>();
 
         public fmMain()
         {
- 
+
             InitializeComponent();
-            RssListView lvRss = new RssListView();
+
             lvRss.Parent = this;
-      
-            lvRss.Dock = DockStyle.Fill;
+            lvRss.Dock = DockStyle.Top;
             lvRss.View = View.Details;
-            //lvRss.
+            lvRss.FullRowSelect = true;
+           
             
-            GetRssFeedsFromConfig();
+
+            RSSFeedCollection feeds = GetRssFeedsFromConfig();
+
+            for (int i = 0; i < feeds.Count; i++)
+            {
+                URLS.Add(feeds[i].FeedURL);
+            }
             Rectangle rect = Screen.PrimaryScreen.WorkingArea;
             this.Left = rect.Width - fWidth;
             this.Top = rect.Height - fHeight;
             fWidth = Properties.Settings.Default.Width;
             fHeight = Properties.Settings.Default.Height;
-            this.Visible = false;
+            //this.Visible = false;
            // lvRss.SetStyle(ControlStyles.OptimizedDoubleBuffer | ControlStyles.AllPaintingInWmPaint, true);
         }
 
@@ -60,7 +67,7 @@ namespace RSSTray
         private void fmMain_Load(object sender, EventArgs e)
         {
           
-            WindowState = FormWindowState.Minimized;
+           // WindowState = FormWindowState.Minimized;
             RefreshFeeds();
         }
 
@@ -80,7 +87,7 @@ namespace RSSTray
         {
             fWidth = Math.Max(200, Width);
             fHeight = Math.Max(200, Height);
-            WindowState = FormWindowState.Minimized;
+           // WindowState = FormWindowState.Minimized;
         }
         private void fmMain_FormClosing(object sender, FormClosingEventArgs e)
         {
@@ -95,10 +102,15 @@ namespace RSSTray
         {
 
             lvRss.Items.Clear();
-            lvRss.Columns.Add("Title");
+            lvRss.Columns.Add("");
+            
             foreach (string url in URLS){
                 RefreshSingleFeed(url);
             }
+            lvRss.Columns[0].Width = -2;
+            
+        
+
 
   }
 
@@ -107,8 +119,9 @@ namespace RSSTray
         {
            DataSet ds = new DataSet();
             ds.ReadXml(URL);
-   
+            dgRSS.Columns.Clear();
 
+            dgRSS.Columns.Add("Title", "Title");
   
             for (int k = 0; k < ds.Tables.Count; k++)
             {
@@ -119,7 +132,8 @@ namespace RSSTray
                         DataRow drow = dtable.Rows[i];
                         if (drow.RowState != DataRowState.Deleted)
                         {
-                            ListViewItem lvi = new ListViewItem(drow["title"].ToString() + Environment.NewLine + drow["description"].ToString());
+                            ListViewItem lvi = new ListViewItem(drow["title"].ToString());
+                            
 
                             lvi.SubItems.Add(drow["description"].ToString());
                             lvi.SubItems.Add(drow["link"].ToString());
@@ -127,7 +141,10 @@ namespace RSSTray
 
                             // Add the list items to the ListView
                             lvRss.Items.Add(lvi);
-    
+
+
+                            dgRSS.Rows.Add();
+                            dgRSS.Rows[i].Cells[0].Value = drow["title"].ToString() + "<br/>"+ drow["description"].ToString();
                         }
                     }
 
@@ -135,12 +152,11 @@ namespace RSSTray
      
 
             }
-    
+
 
            
 
         }
-
 
 
         private void NotifyRSSTray_DoubleClick(object sender, EventArgs e)
@@ -156,15 +172,14 @@ namespace RSSTray
         }
 
 
-        private void GetRssFeedsFromConfig()
+        private static RSSFeedCollection GetRssFeedsFromConfig()
         {
-            foreach (string key in ConfigurationManager.AppSettings)
-            {
-                string value = ConfigurationManager.AppSettings[key];            
-                URLS.Add(value);
-            }
-
+            RSSFeedConfiguration config = (RSSFeedConfiguration)ConfigurationManager.GetSection("RSSFeedConfiguration");
+            return config.RSSFeeds;    
+           
         }
+
+
 
     }
 }
