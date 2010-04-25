@@ -32,10 +32,11 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(fmMain));
             this.NotifyRSSTray = new System.Windows.Forms.NotifyIcon(this.components);
             this.menuContextMain = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.closeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.showToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.closeToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripSeparator();
-            this.showToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.closeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.listViewNew = new System.Windows.Forms.ListView();
             this.menuContextMain.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -45,6 +46,7 @@
             this.NotifyRSSTray.Icon = ((System.Drawing.Icon)(resources.GetObject("NotifyRSSTray.Icon")));
             this.NotifyRSSTray.Text = "NotifyRSSTray";
             this.NotifyRSSTray.Visible = true;
+            this.NotifyRSSTray.DoubleClick += new System.EventHandler(this.NotifyRSSTray_DoubleClick);
             // 
             // menuContextMain
             // 
@@ -56,31 +58,41 @@
             this.menuContextMain.Name = "menuContextMain";
             this.menuContextMain.Size = new System.Drawing.Size(104, 76);
             // 
-            // closeToolStripMenuItem
+            // showToolStripMenuItem
             // 
-            this.closeToolStripMenuItem.Name = "closeToolStripMenuItem";
-            this.closeToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.closeToolStripMenuItem.Text = "Exit";
-            this.closeToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
+            this.showToolStripMenuItem.Name = "showToolStripMenuItem";
+            this.showToolStripMenuItem.Size = new System.Drawing.Size(103, 22);
+            this.showToolStripMenuItem.Text = "Show";
+            this.showToolStripMenuItem.Click += new System.EventHandler(this.showToolStripMenuItem_Click);
             // 
             // closeToolStripMenuItem1
             // 
             this.closeToolStripMenuItem1.Name = "closeToolStripMenuItem1";
-            this.closeToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
+            this.closeToolStripMenuItem1.Size = new System.Drawing.Size(103, 22);
             this.closeToolStripMenuItem1.Text = "Close";
             this.closeToolStripMenuItem1.Click += new System.EventHandler(this.closeToolStripMenuItem1_Click);
             // 
             // toolStripMenuItem1
             // 
             this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-            this.toolStripMenuItem1.Size = new System.Drawing.Size(149, 6);
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(100, 6);
             // 
-            // showToolStripMenuItem
+            // closeToolStripMenuItem
             // 
-            this.showToolStripMenuItem.Name = "showToolStripMenuItem";
-            this.showToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.showToolStripMenuItem.Text = "Show";
-            this.showToolStripMenuItem.Click += new System.EventHandler(this.showToolStripMenuItem_Click);
+            this.closeToolStripMenuItem.Name = "closeToolStripMenuItem";
+            this.closeToolStripMenuItem.Size = new System.Drawing.Size(103, 22);
+            this.closeToolStripMenuItem.Text = "Exit";
+            this.closeToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
+            // 
+            // listViewNew
+            // 
+            this.listViewNew.Location = new System.Drawing.Point(30, 184);
+            this.listViewNew.Name = "listViewNew";
+            this.listViewNew.Size = new System.Drawing.Size(193, 174);
+            this.listViewNew.TabIndex = 1;
+            this.listViewNew.UseCompatibleStateImageBehavior = false;
+            this.listViewNew.View = System.Windows.Forms.View.Details;
+            this.listViewNew.VirtualListSize = 10;
             // 
             // fmMain
             // 
@@ -89,11 +101,13 @@
             this.ClientSize = new System.Drawing.Size(443, 488);
             this.ContextMenuStrip = this.menuContextMain;
             this.ControlBox = false;
+            this.Controls.Add(this.listViewNew);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "fmMain";
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Load += new System.EventHandler(this.fmMain_Load);
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.fmMain_FormClosing);
             this.menuContextMain.ResumeLayout(false);
             this.ResumeLayout(false);
 
@@ -107,6 +121,7 @@
         private System.Windows.Forms.ToolStripMenuItem closeToolStripMenuItem1;
         private System.Windows.Forms.ToolStripSeparator toolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem showToolStripMenuItem;
+        private System.Windows.Forms.ListView listViewNew;
     }
 }
 
